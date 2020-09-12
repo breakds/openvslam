@@ -11,6 +11,11 @@ if(POLICY CMP0074)
     cmake_policy(SET CMP0074 OLD)
 endif()
 
+# CMP0072 is about preferring using GLVND for OpenGL when available.
+if(POLICY CMP0072)
+    cmake_policy(SET CMP0072 NEW)
+endif()
+
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 # ----- Set build type -----

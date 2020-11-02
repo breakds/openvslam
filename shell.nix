@@ -16,6 +16,7 @@ let pkgs = import <nixpkgs> {
 in pkgs.mkShell rec {
   name = "osm";
   buildInputs = with pkgs; [
+    llvmPackages_11.clang
     cmake
     cmakeCurses
     pkgconfig
